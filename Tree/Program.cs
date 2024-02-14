@@ -12,6 +12,7 @@ public class Program
         var builder = WebApplication.CreateBuilder(args);
         
         builder.Services.AddScoped<ITreeRepository, TreeRepository>();
+        builder.Services.AddScoped<INodeRepository, NodeRepository>();
 
         builder.Services.AddControllers();
         builder.Services.AddEndpointsApiExplorer();

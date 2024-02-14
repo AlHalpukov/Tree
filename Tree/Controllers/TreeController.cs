@@ -17,7 +17,7 @@ public class TreeController : ControllerBase
     public ITreeRepository TreeService { get; }
 
     [HttpPost("tree.get")]
-    public Task<TreeDTO> GetOrCreateTree(string name)
+    public Task<TreeDTO> GetOrCreateTree([FromQuery] string name)
     {
         return _treeService.GetOrCreateTree(name);
     }
